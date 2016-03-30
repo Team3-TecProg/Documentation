@@ -3,29 +3,29 @@
 
 In this document you will see how to program using pre set technics about the code, organization of files and more.
 
+* [Identation and spacing](#Identation and Spacing)
+* [Syntax](#Syntax)
+* [Naming](#Naming)
+* [Comments](#Comments)
+* [Classes and modules](#Classes and modules)
+* [Exceptions](#Exceptions)
+* [Collections](#Collections)
+
 # Indentation and Spacing
 
 * Indentations levels are defined with a hard tab, which size is of four Spacings.
 
 ```Ruby
-#wrong
-def enterprise_group_ranking
-    @quantidade = params[:sanctions_count]
-    @enterprises = Enterprise.where(sanctions_count: @quantidade).paginate(:page => params[:page], :per_page => 10)
-end
 
 #right
 def enterprise_group_ranking
-
-    @quantidade = params[:sanctions_count]
-    @enterprises = Enterprise.where(sanctions_count: @quantidade).paginate(:page => params[:page], :per_page => 10)
-
+    @quantity = params[:sanctions_count]
+    @enterprises = Enterprise.where(sanctions_count: @quantity).paginate(:page => params[:page], :per_page => 10)
 end
 ```
 * There are only one statement per line.
 
 ```Ruby
-2
 # wrong
 puts 'testcase'; # superfluous semicolon
 
@@ -38,19 +38,15 @@ puts 'test'
 puts 'case'
 ```
 
-* Class definitions are not defined in a single-line format.
+* Classes with no body definitions are not defined in a single-line format.
 
 ```Ruby
 #wrong
-class Payment < ActiveRecord::Base
-
- #content starts here
-
-end
+PaymentClass = Class.new(Payment)
 
 #right
 class Payment < ActiveRecord::Base
- #content starts here
+    #content starts here
 end
 ```
 
@@ -58,11 +54,7 @@ end
 
 ```Ruby
 #wrong
-def refresh!
-
-    s = SanctionType.find_by_description(self.description)
-
-end
+def refresh!; something; something_else; end
 
 #right
 def refresh!
@@ -108,7 +100,7 @@ exponent_variable = 2**5
 false_boolean = !true
 ```
 
-* No spaces are used inside range operators.  
+* No spaces are used inside range operators.
 * The **when** statement is indented one level deeper than **case** statement.
 
 ```Ruby
@@ -126,14 +118,14 @@ end
 
 #right
 case
-  when user.login == ''
-    puts 'Not again!'
-  when user.login == 'user_login'
-    puts 'Good!'
-  when Time.now.hour == 'a_very_long_long_long_login'
-    puts 'too long bro!'
-  else
-    user.login
+    when user.login == ''
+        puts 'Not again!'
+    when user.login == 'user_login'
+        puts 'Good!'
+    when Time.now.hour == 'a_very_long_long_long_login'
+        puts 'too long bro!'
+    else
+        user.login
 end
 ```
 
@@ -143,26 +135,26 @@ end
 #wrong
 def enterprise_group_ranking
 
-  @quantidade = params[:sanctions_count]
-  @enterprises = Enterprise.where(sanctions_count: @quantidade).paginate(:page => params[:page], :per_page => 10)
+  @quantity = params[:sanctions_count]
+  @enterprises = Enterprise.where(sanctions_count: @quantity).paginate(:page => params[:page], :per_page => 10)
 
 end
 def payment_group_ranking
 
-  @quantidade = params[:payments_count]
-  @enterprises = Enterprise.where(payments_count: @quantidade).paginate(:page => params[:page], :per_page => 10)
+  @quantity = params[:payments_count]
+  @enterprises = Enterprise.where(payments_count: @quantity).paginate(:page => params[:page], :per_page => 10)
 
 end
 
 #right
 def enterprise_group_ranking
-  @quantidade = params[:sanctions_count]
-  @enterprises = Enterprise.where(sanctions_count: @quantidade).paginate(:page => params[:page], :per_page => 10)
+    @quantity = params[:sanctions_count]
+    @enterprises = Enterprise.where(sanctions_count: @quantity).paginate(:page => params[:page], :per_page => 10)
 end
 
 def payment_group_ranking
-  @quantidade = params[:payments_count]
-  @enterprises = Enterprise.where(payments_count: @quantidade).paginate(:page => params[:page], :per_page => 10)
+    @quantity = params[:payments_count]
+    @enterprises = Enterprise.where(payments_count: @quantity).paginate(:page => params[:page], :per_page => 10)
 end
 ```
 
@@ -208,6 +200,18 @@ a_long_array = [ element1, element2, element3, element4, element5, element6,
                  element7, element8, element9, element10, element11 ]
 
 ```
+* Every variable must be initialized.
+
+```Ruby
+#wrong
+user_name
+user_age
+
+#right
+user_name = ""
+user_age = 0
+
+```
 
 # Syntax
 
@@ -230,31 +234,52 @@ EnterpriseModule::EnterpriseSomeClass::SOME_CONST
 #wrong
 def last_sanction
     sanctions = [ "section1","section2","section3" ]
+
     for sanction in sanctions
-      puts sanction
+        puts sanction
     end
 end
 
 #right
 def last_sanction
     sanctions = [ "section1","section2","section3" ]
+
     sanctions.each do |sanction|
-      puts sanction
+        puts sanction
     end
 end
 ```
 
-* Use `if`/`else` statement to express conditions. The condition of a `if`/`else` statement is written on the same line and between parenthesis, and the body of an `if`/`unless` statement is closed by `{}`. Opening braces are written on the same line.
+* Use `if`/`else` statement to express conditions. The condition of a `if`/`else` statement is written on the same line and between parenthesis, and the body of an `if`/`else` statement is closed by `{}`. Opening braces are written on the same line.
 
 ```Ruby
 #wrong
 if 5 > 4
-  puts "It's true"
+    puts "It's true"
 end
 
 #right
 if ( 5 > 4 ){
-  puts "It's true"
+    puts "It's true"
+}
+```
+
+* Every `if` statement must have an additional `else` statement.
+
+```Ruby
+#wrong
+user_name = "Bob"
+
+if(user_name != nil){
+    puts user_name
+}
+
+#right
+if( user_name != nil ){
+    puts user_name
+}
+else{
+    #nothing to do
 }
 ```
 
@@ -266,22 +291,22 @@ if ( 5 > 4 ){
 
 ```Ruby
 #wrong
-if ( 5 > 4 and 6 > 5 )
-  puts "It's true"
-end
+if ( 5 > 4 and 6 > 5 ){
+    puts "It's true"
+}
 
-if ( 5 > 4 or 6 > 5 )
-  puts "It's true"
-end
+if ( 5 > 4 or 6 > 5 ){
+    puts "It's true"
+}
 
 #right
-if ( 5 > 4 && 6 > 5 )
-  puts "It's true"
-end
+if ( 5 > 4 && 6 > 5 ){
+    puts "It's true"
+}
 
-if ( 5 > 4 || 6 > 5 )
-  puts "It's true"
-end
+if ( 5 > 4 || 6 > 5 ){
+    puts "It's true"
+}
 ```
 
 * `unless` must not be used with `else`. `if` must be used instead.
@@ -291,17 +316,14 @@ end
 ```Ruby
 #wrong
 class Payment
-  attr_reader( :name, :date )
-
-  # omitted
+    attr_reader( :name, :date )
+    # content starts here
 end
 
-
-        #right
+#right
 class Payment
-  attr_reader :value, :date
-
-  # omitted
+    attr_reader :value, :date
+    # content starts here
 end
 ```
 
@@ -318,12 +340,12 @@ end
 ```Ruby
   #wrong
 def LastPayment
-  puts paymentVariable
+    puts paymentVariable
 end
 
 #right
 def last_payment
-  puts payment_variable
+    puts payment_variable
 end
 ```
 
@@ -347,12 +369,12 @@ app/all_models/sanction_type.rb
 
 #wrong
 class User_example_class < ActiveRecord::Base
-  #class content
+    #class content
 end
 
 #right
 class UserExampleClass < ActiveRecord::Base
-  #class content
+    #class content
 end
 
 ```
@@ -364,7 +386,7 @@ end
 constant_sanction = "I'm a constant"
 
 #right
-CONSTANT_SANCTION = "I'm a contant"
+CONSTANT_SANCTION = "I'm a constant"
 ```
 
 # Comments
@@ -389,13 +411,13 @@ another comment line
 ```Ruby
 #wrong
 
-  # i'm a long comment, you should've notice that my lenght is being
-  # greater quickly
+# i'm a long comment, you should've notice that my lenght is being
+# greater quickly
 
 #right
 
-  # I'm a long comment, you should've notice that my lenght is being
-  # Greater quickly.
+# I'm a long comment, you should've notice that my lenght is being
+# Greater quickly.
 ```
 
 [comment]: # (Comment Annotations)
@@ -407,49 +429,49 @@ another comment line
 
 ```Ruby
 class Payment
-  # extend and include go first
-  extend SomeModule
-  include AnotherModule
+    # extend and include go first
+    extend SomeModule
+    include AnotherModule
 
-  # inner classes
-  CustomErrorKlass = Class.new(StandardError)
+    # inner classes
+    CustomErrorKlass = Class.new(StandardError)
 
-  # constants are next
-  SOME_CONSTANT = 20
+    # constants are next
+    SOME_CONSTANT = 20
 
-  # afterwards we have attribute macros
-  attr_reader :name
+    # afterwards we have attribute macros
+    attr_reader :name
 
-  # followed by other macros (if any)
-  validates :name
+    # followed by other macros (if any)
+    validates :name
 
-  # public class methods are next in line
-  def self.some_method
-#content starts here
-  end
+    # public class methods are next in line
+    def self.some_method
+        #content starts here
+    end
 
-  # initialization goes between class methods and other instance methods
-  def initialize
-#content starts here
-  end
+    # initialization goes between class methods and other instance methods
+    def initialize
+        #content starts here
+    end
 
-  # followed by other public instance methods
-  def some_method
-#content starts here
-  end
+    # followed by other public instance methods
+    def some_method
+        #content starts here
+    end
 
-  # protected and private methods are grouped near the end
-  protected
+    # protected and private methods are grouped near the end
+    protected
 
-  def some_protected_method
-    #content starts here
-  end
+    def some_protected_method
+        #content starts here
+    end
 
-  private
+    private
 
-  def some_private_method
-#content starts here
-  end
+    def some_private_method
+        #content starts here
+    end
 
 end
 ```
@@ -461,14 +483,13 @@ end
 
 # foo.rb
 class User
-  class Payment
-    # 30 methods inside
-  end
+    class Payment
+        # 30 methods inside
+    end
 
-  class State
-    # 20 methods inside
-  end
-
+    class State
+        # 20 methods inside
+    end
   # 30 methods inside
 end
 
@@ -476,21 +497,21 @@ end
 
 # foo.rb
 class User
-  # 30 methods inside
+    # 30 methods inside
 end
 
 # foo/bar.rb
 class User
-  class Payment
-    # 30 methods inside
-  end
+    class Payment
+        # 30 methods inside
+    end
 end
 
 # foo/car.rb
 class User
-  class State
-    # 20 methods inside
-  end
+    class State
+        # 20 methods inside
+    end
 end
 
 ```
@@ -500,26 +521,26 @@ end
 ```Ruby
 # wrong
 class UserClass
-  def self.some_method
-    # content starts here
-  end
+    def self.some_method
+        # content starts here
+    end
 
-  def self.some_other_method
-    #content starts here  
-  end
+    def self.some_other_method
+        #content starts here
+    end
 end
 
 # right
 module SomeModule
-  module_function
+    module_function
 
-  def some_method
-    #content starts here
-  end
+    def some_method
+        #content starts here
+    end
 
-  def some_other_method
-    #content starts here      
-  end
+    def some_other_method
+        #content starts here
+    end
 end
 
 ```
@@ -529,28 +550,28 @@ end
 ```Ruby
 #wrong
 class Person
-  def initialize(value, date)
-    @date = date
-    @date = date
-  end
+    def initialize(value, date)
+        @date = date
+        @date = date
+    end
 
-  def value
-    @value
-  end
+    def value
+        @value
+    end
 
-  def date
-    @date
-  end
+    def date
+        @date
+    end
 end
 
 #right
 class Payment
-  attr_reader :value, :date
+    attr_reader :value, :date
 
-  def initialize(value, date)
-    @value = value
-    @date = date
-  end
+    def initialize(value, date)
+        @value = value
+        @date = date
+    end
 end
 ```
 
@@ -558,20 +579,17 @@ end
 
 ```Ruby
 # wrong
-    attr :value, true
-    attr :one, :two, :three
+attr :value, true
+attr :one, :two, :three
 
-    # right
-    attr_accessor :value
-    attr_reader :one, :two, :three
+# right
+attr_accessor :value
+attr_reader :one, :two, :three
 ```
 
-* Class variabels **@@** must not be used.
-
-[comment]: # (Não precisa de exemplo!)
+* Class variables **@@** must not be used.
 
 * Visibility levels to methods, like **public**, **protected**, **private**, must be used properly, depending on the method and its functionality and objective.
-
 
 * The visibility method must be indented on the same level as the method they apply to. One blank line must be used above and below the visibility level.
 
@@ -593,8 +611,8 @@ end
 
 ```Ruby
 Class User
-self.user_self_method
-    #content starts here
+    self.user_self_method
+        #content starts here
     end
 end
 ```
@@ -645,10 +663,10 @@ array = [ 'poor',  'rich',  'milionaire' ]
 
 ```Ruby
 #wrong
-    First_element = array[0]
+First_element = array[0]
 
-    #right
-    First_element = array.first
+#right
+First_element = array.first
 ```
 
 * Symbols must be used instead of strings as hash keys, unless for some reason unavoidable.
@@ -671,7 +689,7 @@ hash = { :key1 => 1, :key2 => 2, :key3 => 3 }
 hash = { key1: 1, key2: 2, key3: 3 }
 ```
 
-* If ther is a key that is not a symbol in a hash, the hash rocket syntax must be used for all keys instead of the Ruby 1.9 hash literal syntax.
+* If there is a key that is not a symbol in a hash, the hash rocket syntax must be used for all keys instead of the Ruby 1.9 hash literal syntax.
 
 ```Ruby
 #wrong
