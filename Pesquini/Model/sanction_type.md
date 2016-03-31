@@ -11,7 +11,6 @@
 ## Variables
 
 ### s
-	Receives descrition of a sanction type
+	Receives description of a sanction type
 ### stantion_types
 	Receive all sanction type objects
-
