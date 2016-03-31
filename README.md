@@ -3,15 +3,15 @@
 
 In this document you will see how to program using pre set technics about the code, organization of files and more.
 
-* [Identation and spacing](#Identation and Spacing)
-* [Syntax](#Syntax)
-* [Naming](#Naming)
-* [Comments](#Comments)
-* [Classes and modules](#Classes and modules)
-* [Exceptions](#Exceptions)
-* [Collections](#Collections)
+* [1. Identation and spacing](#identation-and-spacing)
+* [2. Syntax](#syntax)
+* [3. Naming](#naming)
+* [4. Comments](#comments)
+* [5. Classes and modules](#classes-and-modules)
+* [6. Exceptions](#exceptions)
+* [7. Collections](#collections)
 
-# Indentation and Spacing
+# 1. Indentation and Spacing
 
 * Indentations levels are defined with a hard tab, which size is of four Spacings.
 
@@ -213,7 +213,7 @@ user_age = 0
 
 ```
 
-# Syntax
+# 2. Syntax
 
 * `::` is used only for constants and constructors. Not for regular method invocation.
 
@@ -327,7 +327,7 @@ class Payment
 end
 ```
 
-# Naming
+# 3. Naming
 
 * Names are defined in **english**.
 * snake_case is used for:
@@ -368,12 +368,12 @@ app/all_models/sanction_type.rb
 ```Ruby
 
 #wrong
-class User_example_class < ActiveRecord::Base
+class User_controller < ActiveRecord::Base
     #class content
 end
 
 #right
-class UserExampleClass < ActiveRecord::Base
+class UserController < ActiveRecord::Base
     #class content
 end
 
@@ -389,7 +389,7 @@ constant_sanction = "I'm a constant"
 CONSTANT_SANCTION = "I'm a constant"
 ```
 
-# Comments
+# 4. Comments
 * Use block comments instead of single line comments.
 
 ```Ruby
@@ -423,7 +423,7 @@ another comment line
 [comment]: # (Comment Annotations)
 
 
-# Classes and Modules
+# 5. Classes and Modules
 
 * Classes must have a consistent structure. The class definition is followed by, in this order: `extend`and `include`, inner classes, constants, attribute macros, other macros (if any), public class methods, initializations, public instance methods, and, near the end, protected and private methods.
 
@@ -617,7 +617,7 @@ Class User
 end
 ```
 
-# Exceptions
+# 6. Exceptions
 
 * Exceptions are signaled with the fail method. The raise method must be used only when purposely raising the exception.
 
@@ -635,7 +635,7 @@ fail PaymentException, 'message'
 # Consistent with `fail SomeException, 'message', ba´cktrace`.
 ```
 
-# Collections
+# 7. Collections
 
 * Array and hash creation notation must be used in its literal form.
 
