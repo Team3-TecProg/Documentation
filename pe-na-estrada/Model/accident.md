@@ -15,7 +15,7 @@
 
 ## Variables
 
-	** Empty **
+	Empty.
 
 ## Attributes
 
