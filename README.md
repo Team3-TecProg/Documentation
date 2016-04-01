@@ -3,13 +3,13 @@
 
 In this document you will see how to program using pre set technics about the code, organization of files and more.
 
-* [1. Identation and spacing](#identation-and-spacing)
-* [2. Syntax](#syntax)
-* [3. Naming](#naming)
-* [4. Comments](#comments)
-* [5. Classes and modules](#classes-and-modules)
-* [6. Exceptions](#exceptions)
-* [7. Collections](#collections)
+* [1. Identation and spacing](#1-indentation-and-spacing)
+* [2. Syntax](#2-syntax)
+* [3. Naming](#3-naming)
+* [4. Comments](#4-comments)
+* [5. Classes and modules](#5-classes-and-modules)
+* [6. Exceptions](#6-exceptions)
+* [7. Collections](#7-collections)
 
 # 1. Indentation and Spacing
 
