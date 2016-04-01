@@ -200,6 +200,9 @@ a_long_array = [ element1, element2, element3, element4, element5, element6,
                  element7, element8, element9, element10, element11 ]
 
 ```
+
+# 2. Syntax
+
 * Every variable must be initialized.
 
 ```Ruby
@@ -212,8 +215,6 @@ user_name = ""
 user_age = 0
 
 ```
-
-# 2. Syntax
 
 * `::` is used only for constants and constructors. Not for regular method invocation.
 
@@ -287,24 +288,25 @@ else{
 [comment]: # (* The nested form `if` x;... must not be used.)
 * Ternary Operator ?: must not be used. `if`/`then`/`else`/`end` must be used instead.
 * The operator `!` must be used instead of `not`.
-* The keywords `and` and `or` must not be used. Instead, are used the operators `&&` and `||`.
+* The operators `&&` and `||` must not be used. Instead, are used the keywords `and` and `or`.
 
 ```Ruby
 #wrong
-if ( 5 > 4 and 6 > 5 ){
-    puts "It's true"
-}
-
-if ( 5 > 4 or 6 > 5 ){
-    puts "It's true"
-}
-
-#right
 if ( 5 > 4 && 6 > 5 ){
     puts "It's true"
 }
 
 if ( 5 > 4 || 6 > 5 ){
+    puts "It's true"
+}
+
+#right
+
+if ( 5 > 4 and 6 > 5 ){
+    puts "It's true"
+}
+
+if ( 5 > 4 or 6 > 5 ){
     puts "It's true"
 }
 ```
