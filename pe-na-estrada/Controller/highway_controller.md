@@ -72,9 +72,9 @@
 	Represents the mileage of a brazilian highway.
 ### @highways
 	Represents all the highways in the database.
-	accidents_number
+### accidents_number
 	Represents the number of accidents on a highway.
-	total_accidents
+### total_accidents
 	Represents the number of registered accidents.
 ### @highway2
 	Represents all the highways in the database ordered by their accident rate.
