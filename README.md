@@ -10,6 +10,7 @@ In this document you will see how to program using pre set technics about the co
 * [5. Classes and modules](#5-classes-and-modules)
 * [6. Exceptions](#6-exceptions)
 * [7. Collections](#7-collections)
+* [8. References](#8-references)
 
 # 1. Indentation and Spacing
 
@@ -403,8 +404,8 @@ another comment line
 
 #right
 # good
-# comment line
-# another comment line
+# Comment line.
+# Another comment line.
 ```
 
 * Comments are written in english.
@@ -700,3 +701,7 @@ hash = { key1: 1, key2: 2, key3: 3 }
 #right
 { :key_a => 1, 'key_b' => 2 }
 ```
+
+# 8. References
+
+        https://github.com/bbatsov/rails-style-guide
