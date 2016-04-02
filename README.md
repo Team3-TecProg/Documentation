@@ -107,26 +107,26 @@ false_boolean = !true
 ```Ruby
 #wrong
 case
-when user.login == ''
-  puts 'Not again!'
-when user.login == 'user_login'
-  puts 'Good!'
-when Time.now.hour == 'a_very_long_long_long_login'
-  puts 'too long bro!'
+when variable.action == ''
+  puts 'Case 1'
+when variable.action == 'variable_action'
+  puts 'Case 2'
+when variable.action == 'wrong_variable_action'
+  puts 'Case 3'
 else
-  user.login
+  variable.action
 end
 
 #right
 case
-    when user.login == ''
-        puts 'Not again!'
-    when user.login == 'user_login'
-        puts 'Good!'
-    when Time.now.hour == 'a_very_long_long_long_login'
-        puts 'too long bro!'
+when variable.action == ''
+        puts 'Case 1'
+    when variable.action == 'variable_action'
+        puts 'Case 2'
+    when variable.action == 'wrong_variable.action'
+        puts 'Case 3'
     else
-        user.login
+        variable.action
 end
 ```
 
@@ -183,10 +183,10 @@ end
 
 ```Ruby
 #wrong
-long_variable = "abcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcde"
+long_variable = "here_have_a_very_long_string_to_exemplify_a_line_thats_have_more_than_80_characters."
 
 #right
-long_variable = "abcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeab"
+long_variable = "here_have_a_very_long_string_to_exemplify_a_line_thats_have_80_characters."
 ```
 
 * Align the element of an array that appears in more than one line.
@@ -552,7 +552,7 @@ end
 
 ```Ruby
 #wrong
-class Person
+class OneClass
     def initialize(value, date)
         @date = date
         @date = date
@@ -568,7 +568,7 @@ class Person
 end
 
 #right
-class Payment
+class OneClass
     attr_reader :value, :date
 
     def initialize(value, date)
@@ -597,7 +597,7 @@ attr_reader :one, :two, :three
 * The visibility method must be indented on the same level as the method they apply to. One blank line must be used above and below the visibility level.
 
 ```Ruby
-class PaymentClass
+class Payment
       def public_method
             #content starts here
       end
@@ -644,10 +644,10 @@ fail PaymentException, 'message'
 
 ```Ruby
 # wrong
-array = %w(poor rich milionaire)
+array = %w(here have an array)
 
 # right
-array = [ 'poor',  'rich',  'milionaire' ]
+array = [ 'here',  'have',  'an', 'array' ]
 ```
 
 
@@ -655,11 +655,11 @@ array = [ 'poor',  'rich',  'milionaire' ]
 
 ```Ruby
 # wrong
-array = [ 'poor',  'rich',  'milionaire
+array = [ 'here',  'have',  'an', 'array
 ', ]
 
 # right
-array = [ 'poor',  'rich',  'milionaire' ]
+array = [ 'here',  'have',  'an', 'array' ]
 ```
 
 * `first` and `last` must be used accessing the first or last item of an array or hash, instead of [0] or `[-1]`.
