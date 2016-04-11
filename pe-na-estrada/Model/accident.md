@@ -1,4 +1,5 @@
 # Class accident
+	Represents any kind of accident, like car crashes, that may happen in a highway.
 
 ## Methods
 

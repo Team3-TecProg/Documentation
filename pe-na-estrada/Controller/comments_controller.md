@@ -1,4 +1,5 @@
 # Class comments-controller
+	Holds the methods that integrate the Comment class to its view pages.
 
 ## Methods
 

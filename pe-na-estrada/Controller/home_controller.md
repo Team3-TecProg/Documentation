@@ -1,4 +1,5 @@
 # class home_controller
+	Holds methods that integrate the Home class to its view pages.
 
 ## Methods
 

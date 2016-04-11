@@ -1,4 +1,5 @@
 # Class highway
+	Represents a highway, a main public road, that usually connects towns and cities.
 
 ## Methods
 

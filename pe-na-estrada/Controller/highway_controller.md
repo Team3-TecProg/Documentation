@@ -1,4 +1,5 @@
 # Class highway-controller
+	Holds the methods that control and manipulate the Highway Class.
 
 ## Methods
 

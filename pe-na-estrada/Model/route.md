@@ -1,4 +1,5 @@
 # Class route 
+	Represents a path between highways, calculated to avoid accidents while getting from one point to another.
 
 ## Methods
 

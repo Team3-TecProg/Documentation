@@ -1,4 +1,5 @@
 # Class comment 
+	Represents comments, personal opinions from users, about an accident.
 
 ## Methods
 
