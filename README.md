@@ -252,7 +252,7 @@ def last_sanction
 end
 ```
 
-* Use `if`/`else` statement to express conditions. The condition of a `if`/`else` statement is written on the same line and between parenthesis, and the body of an `if`/`else` statement is closed by `{}`. Opening braces are written on the same line.
+* Use `if`/`else` statement to express conditions. The condition of a `if`/`else` statement is written on the same line and between parenthesis, and the body of an `if`/`else` statement is not closed by `{}`. The keyword `end` is used at the end of `if`/`else` declaration. 
 
 ```Ruby
 #wrong
@@ -261,9 +261,9 @@ if 5 > 4
 end
 
 #right
-if ( 5 > 4 ){
+if ( 5 > 4 )
     puts "It's true"
-}
+end
 ```
 
 * Every `if` statement must have an additional `else` statement.
