@@ -252,7 +252,7 @@ def last_sanction
 end
 ```
 
-* Use `if`/`else` statement to express conditions. The condition of a `if`/`else` statement is written on the same line and between parenthesis, and the body of an `if`/`else` statement is not closed by `{}`. The keyword `end` is used at the end of `if`/`else` declaration. 
+* Use `if`/`else` statement to express conditions. The condition of a `if`/`else` statement is written on the same line and between parenthesis, and the body of an `if`/`else` statement is not closed by `{}`. The keyword `end` is used at the end of `if`/`else` declaration.
 
 ```Ruby
 #wrong
@@ -288,7 +288,7 @@ else{
 * Only one expression per line is used in the body of a constructor, like `if`/`else`.
 [comment]: # (* The nested form `if` x;... must not be used.)
 * Ternary Operator ?: must not be used. `if`/`then`/`else`/`end` must be used instead.
-* The operator `!` must be used instead of `not`.
+* The keyword `not` must be used instead of the operator `!`.
 * The operators `&&` and `||` must not be used. Instead, are used the keywords `and` and `or`.
 
 ```Ruby
