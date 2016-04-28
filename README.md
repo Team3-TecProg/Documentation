@@ -3,16 +3,29 @@
 
 In this document you will see how to program using pre set technics about the code, organization of files and more.
 
-* [1. Identation and spacing](#1-indentation-and-spacing)
-* [2. Syntax](#2-syntax)
-* [3. Naming](#3-naming)
-* [4. Comments](#4-comments)
-* [5. Classes and modules](#5-classes-and-modules)
-* [6. Exceptions](#6-exceptions)
-* [7. Collections](#7-collections)
-* [8. References](#8-references)
+* [1. Header](#1-header)
+* [2. Identation and spacing](#2-indentation-and-spacing)
+* [3. Syntax](#3-syntax)
+* [4. Naming](#4-naming)
+* [5. Comments](#5-comments)
+* [6. Classes and modules](#6-classes-and-modules)
+* [7. Exceptions](#7-exceptions)
+* [8. Collections](#8-collections)
+* [9. References](#9-references)
 
-# 1. Indentation and Spacing
+# 1. Header
+
+* The header must content the **class name**, **file name** and **description** of the class. The lines of `#` contains 70 `#`.
+
+```Ruby
+######################################################################
+# Class name: CommentsController
+# File name: comments_controller.rb
+# Description: Controller used to communicate with the view highways/show
+######################################################################
+```
+
+# 2. Indentation and Spacing
 
 * Indentations levels are defined with a hard tab, which size is of four Spacings.
 
@@ -161,6 +174,8 @@ end
 
 * Parameters of method calls, when spamming more than one line, are indented.
 
+> Pode ter parentesis nos métodos? Acho que não.
+
 ```Ruby
 #wrong
 def a_simple_method ( argument_one, argument_two, argument_three, argument_four,argument_five, argument_six, argument_seven)
@@ -202,7 +217,7 @@ a_long_array = [ element1, element2, element3, element4, element5, element6,
 
 ```
 
-# 2. Syntax
+# 3. Syntax
 
 * Every variable must be initialized.
 
@@ -252,7 +267,7 @@ def last_sanction
 end
 ```
 
-* Use `if`/`else` statement to express conditions. The condition of a `if`/`else` statement is written on the same line and between parenthesis, and the body of an `if`/`else` statement is not closed by `{}`. The keyword `end` is used at the end of `if`/`else` declaration.
+* Use `if`/`else` statement to express conditions. The condition of a `if`/`else` statement is written on the same line and between parenthesis, and the body of an `if`/`else` statement is closed by `{}`. Opening braces are written on the same line.
 
 ```Ruby
 #wrong
@@ -272,44 +287,43 @@ end
 #wrong
 user_name = "Bob"
 
-if(user_name != nil){
+if(user_name != nil)
     puts user_name
-}
+end
 
 #right
-if( user_name != nil ){
-    puts user_name
-}
-else{
+if( user_name != nil )
+    puts user_name}
+else
     #nothing to do
-}
+end
 ```
 
 * Only one expression per line is used in the body of a constructor, like `if`/`else`.
 [comment]: # (* The nested form `if` x;... must not be used.)
 * Ternary Operator ?: must not be used. `if`/`then`/`else`/`end` must be used instead.
-* The keyword `not` must be used instead of the operator `!`.
+* The operator `!` must be used instead of `not`.
 * The operators `&&` and `||` must not be used. Instead, are used the keywords `and` and `or`.
 
 ```Ruby
 #wrong
-if ( 5 > 4 && 6 > 5 ){
+if ( 5 > 4 && 6 > 5 )
     puts "It's true"
-}
+end
 
-if ( 5 > 4 || 6 > 5 ){
+if ( 5 > 4 || 6 > 5 )
     puts "It's true"
-}
+end
 
 #right
 
-if ( 5 > 4 and 6 > 5 ){
+if ( 5 > 4 and 6 > 5 )
     puts "It's true"
-}
+end
 
-if ( 5 > 4 or 6 > 5 ){
+if ( 5 > 4 or 6 > 5 )
     puts "It's true"
-}
+end
 ```
 
 * `unless` must not be used with `else`. `if` must be used instead.
@@ -330,7 +344,7 @@ class Payment
 end
 ```
 
-# 3. Naming
+# 4. Naming
 
 * Names are defined in **english**.
 * snake_case is used for:
@@ -392,7 +406,7 @@ constant_sanction = "I'm a constant"
 CONSTANT_SANCTION = "I'm a constant"
 ```
 
-# 4. Comments
+# 5. Comments
 * Use block comments instead of single line comments.
 
 ```Ruby
@@ -426,7 +440,7 @@ another comment line
 [comment]: # (Comment Annotations)
 
 
-# 5. Classes and Modules
+# 6. Classes and Modules
 
 * Classes must have a consistent structure. The class definition is followed by, in this order: `extend`and `include`, inner classes, constants, attribute macros, other macros (if any), public class methods, initializations, public instance methods, and, near the end, protected and private methods.
 
@@ -620,7 +634,7 @@ Class User
 end
 ```
 
-# 6. Exceptions
+# 7. Exceptions
 
 * Exceptions are signaled with the fail method. The raise method must be used only when purposely raising the exception.
 
@@ -638,7 +652,7 @@ fail PaymentException, 'message'
 # Consistent with `fail SomeException, 'message', ba´cktrace`.
 ```
 
-# 7. Collections
+# 8. Collections
 
 * Array and hash creation notation must be used in its literal form.
 
@@ -702,6 +716,6 @@ hash = { key1: 1, key2: 2, key3: 3 }
 { :key_a => 1, 'key_b' => 2 }
 ```
 
-# 8. References
+# 9. References
 
         https://github.com/bbatsov/rails-style-guide
