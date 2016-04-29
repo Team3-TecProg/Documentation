@@ -1,4 +1,6 @@
-# Class EnterpriseController
+# Class StatisticsController
+
+Class that holds methods to ranking manipulation.
 
 ## Methods
 
@@ -74,7 +76,7 @@
     Object that stores the graph.
 
 ### f
-    Auxiliar variable used to sed configurations of graph.
+    Auxiliary variable used to seed configurations of graph.
 
 ### @states
     Receives a copy of the @@STATES_LIST variable.

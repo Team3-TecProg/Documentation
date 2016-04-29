@@ -1,5 +1,7 @@
 # Class EnterpriseController
 
+Represents a Brazilian Enterprise.
+
 ## Methods
 
 ### index
