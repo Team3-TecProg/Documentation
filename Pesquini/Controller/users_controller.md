@@ -1,5 +1,7 @@
 # Class UsersController
 
+Represents an User of the application.
+
 ## Methods
 
 ### new
