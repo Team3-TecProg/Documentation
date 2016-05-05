@@ -1,5 +1,7 @@
 # Class State
 
+Represents states in the Brazilian territory.
+
 ## Methods
 
 ### refresh!

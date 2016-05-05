@@ -1,4 +1,7 @@
-# Class Enterprise
+# Class Sanction
+
+Represents a penalization or restriction for an enterprise, if it violated the 
+law, or a reward or permission, the enterprise it followed it.
 
 ## Methods
 

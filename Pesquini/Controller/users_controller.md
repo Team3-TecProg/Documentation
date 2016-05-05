@@ -1,6 +1,6 @@
 # Class UsersController
 
-Represents an User of the application.
+Class that holds methods to link the User model with the User views, allowing interaction.
 
 ## Methods
 

@@ -1,5 +1,7 @@
 # Class Enterprise
 
+Represents a Brazilian Enterprise.
+
 ## Methods
 
 ### last_sanction

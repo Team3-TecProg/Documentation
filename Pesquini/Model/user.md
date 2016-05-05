@@ -1,5 +1,7 @@
 # Class User
 
+Represents an User of the application.
+
 ## Methods
 
 # has_secure_password

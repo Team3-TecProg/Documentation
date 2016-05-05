@@ -1,4 +1,5 @@
 # Class ApplicationController
+
 Default Rails Super Class, used to define behaviors that must to be applied for all controllers.
 
 ##Methods

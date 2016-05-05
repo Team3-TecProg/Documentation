@@ -1,5 +1,7 @@
 # Class Payment
 
+Represents a monetary transaction in the form of a payment done by an enterprise.
+
 ## Methods
 
 ### refresh!

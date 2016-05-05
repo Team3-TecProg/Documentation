@@ -1,5 +1,7 @@
 # Class SanctionType
 
+Represents the possible types for a sanction.
+
 ## Methods
 
 ### refresh!

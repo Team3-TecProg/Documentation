@@ -1,6 +1,6 @@
 # Class EnterpriseController
 
-Represents a Brazilian Enterprise.
+Class that holds methods to link the Enterprise model with the Enterprise views, allowing user interaction.
 
 ## Methods
 
