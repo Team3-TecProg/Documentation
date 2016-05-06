@@ -437,6 +437,15 @@ another comment line
 # Greater quickly.
 ```
 
+* Comments of each method must have description,parameters and its return.
+
+```Ruby
+# Description: Searchs for a enterprise according the params sent by user,
+# once did it, return a set of enterprises with pagination.
+# Parameters: none.
+# Return: @enterprises.
+```
+
 [comment]: # (Comment Annotations)
 
 
